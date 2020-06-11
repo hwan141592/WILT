@@ -1,0 +1,34 @@
+ls -al 
+ls -a | grep 'dust'
+ls -al | grep 'dust'
+find -name 'dust'
+find /. -name 'dust'
+find ./ -name 'dust'
+find ./ -name 'TIL'
+find ./ -maxdepth 1 -name 'TIL'
+find ./ -name '*TIL*'
+find ./ -name '*IL*'
+find ./ -name '*I*'
+find ./ -maxdepth 1 -name '*I*'
+history
+history 8
+hitory 15
+history 15
+history |grep find
+history -w commandex_all.txt
+ls
+cd TIL/
+git status
+history 10 -w last_10_commands.txt
+history -w commands.txt
+git status
+cat commands.txt 
+git status
+git add .
+git status
+git reset commands.txt
+git status
+rm commands.txt 
+ls
+git status
+history -w commands_all.txt
