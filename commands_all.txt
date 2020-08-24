@@ -1,3 +1,4 @@
+ls
 ls -al 
 ls -a | grep 'dust'
 ls -al | grep 'dust'
