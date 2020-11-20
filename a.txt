@@ -1,5 +1,6 @@
-numpy
-pandas
-matplotlib
+os
+numpy as np 
+pandas as pd
+matplotlib.pyplot as plt 
 seaborn
 tensorflow
