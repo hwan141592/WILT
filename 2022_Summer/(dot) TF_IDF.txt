@@ -99,6 +99,6 @@
  - "TF-IDF 점수가 높은 단어일수록 다른 문서에는 많지 않고 해당 문서에서 자주 등장하는 단어이다"
 
 
-[References] 
+[Reference] 
  - https://wikidocs.net/22650
  - https://nesoy.github.io/articles/2017-11/tf-idf
