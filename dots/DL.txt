@@ -35,7 +35,61 @@ Feedforward Neural Network
  - (keywords) output과 target 비교
 
 Feedforward NN 만들기(construction)
- 1) 
+ 1) hidden layer와 output layer의 모든 layer들마다
+    각 layer에 추가할 unit의 갯수와 activation function을 정의한다.
+ 2) network에서 사용할 hidden layer의 갯수를 정의한다.
+  - layer 갯수가 많을수록 network가 더 복잡한 relationship을 학습
+  - but, layer 갯수가 많을수록 동시에 computational cost가 커짐
+ 3) (필요시) output layer의 activation function 구조를 정의한다.
+ 4) loss function을 정의한다.
+  - loss function: 얼마나 예측값이 실제값과 match하는지를 측정하는 함수
+ 5) optimizer를 정의한다.
+  - 'walking around' the loss function
+ 6) performance를 evaluate할 metric을 하나 이상 정의/선택한다.
+  - e.g.) accuracy
+
+Feedforward NN의 구성요소 (details)
+ - [A] Hidden Layers
+ - [B] Output Layer
+ - [C] Loss Function
+ - [D] Optimizer
+
+[A] Hidden Layers의 각 Unit
+ - 1) 많은 input을 받는다.
+ - 2) parameter 값에 따라서 각각의 input에 weight를 준다.
+ - 3) weighted input 값들을 모두 합한다. (bias 포함)
+ - 4) activate function을 적용한다.
+ - 5) 자신(unit)의 output의 다음 layer의 unit에게 전달한다.
+
+[B] Output Layer Pattern
+ - 1) Binary Classification
+   >> unit 하나 & sigmoid activation function
+ - 2) Multi-class Classification
+   >> k unit & softmax activation function
+   >> k: target 클래스의 갯수
+   >> softmax: (0,1) 구간의 확률분포로 normalize 해주는 역할
+ - 3) Regression
+   >> unit 하나 & no activation function
+
+[C] Loss Function
+ - 1) Binary Classification
+ - 2) Multiclass Classification
+ - 3) Regression
+
+[D] Optimizers
+ - Stochastic gradient descent
+ - Stochastic gradient descent with momentum 
+ - Root mean square propagation
+ - Adaptive moment estimation
+
+
+
+
+
+
+
+
+
 
 
 
