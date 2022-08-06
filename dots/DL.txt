@@ -8,8 +8,8 @@ Deep Learning?
 
 Feedforward Neural Networks
  - a.k.a. 'Multilayer Perceptron(MLP)'
- - Input Layer, Hidden Layer, Output Layer
- - intercept, features, Error back propagation
+ - (keywords) Input Layer, Hidden Layer, Output Layer
+ - (keywords) intercept, features, Error back propagation
 
 Neural Network 3가지
  - ANN: Artificial Neural Network
@@ -19,7 +19,25 @@ Neural Network 3가지
 ------------------------------------------
 
 ANN
- - 
+ - Artificial Neural Network
+
+NN
+ - Neural Network
+ - 연결된 layer들의 시리즈
+ - one end: 관측치의 feature 
+ - the other end: target value (e.g. class label)
+
+Feedforward Neural Network
+ - a.k.a. 'Multilayer Perceptron(MLP)'
+ - [GOAL] output layer 값들이 target 값들과 일치시키는 것
+ - (keywords) Forward-Propagation, Back-Propagation
+ - (keywords) Update weights
+ - (keywords) output과 target 비교
+
+Feedforward NN 만들기(construction)
+ 1) 
+
+
 
 
 
