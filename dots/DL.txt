@@ -1,0 +1,29 @@
+[Q.] Deep Learning 이란 무엇인가요?
+
+Deep Learning?
+ - input set과 output set을 mapping하는 것을 학습(learn)하는 것
+ - neural network에서 hidden layer를 많이 사용한 것을 'deep'한 network라고 함
+ - deep한 network의 application을 'deep learning'이라고 함
+ - 즉, deep learning이란 "hidden layer를 많이 사용한 neural network의 application"
+
+Feedforward Neural Networks
+ - a.k.a. 'Multilayer Perceptron(MLP)'
+ - Input Layer, Hidden Layer, Output Layer
+ - intercept, features, Error back propagation
+
+Neural Network 3가지
+ - ANN: Artificial Neural Network
+ - RNN: Recurrent Neural Network
+ - CNN: Convolutional Neural Network
+
+------------------------------------------
+
+ANN
+ - 
+
+
+
+
+
+
+
