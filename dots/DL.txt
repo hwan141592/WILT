@@ -73,14 +73,53 @@ Feedforward NN의 구성요소 (details)
 
 [C] Loss Function
  - 1) Binary Classification
+   >> target class가 2개인 classification problem
+   >> Loss Function: 'Cross-Entropy'
+   >> also a.k.a Logarithmic loss
  - 2) Multiclass Classification
+   >> target class가 2개 보다 많은 classification problem
+   >> Loss Function: 'Categorical Cross-Entropy'
  - 3) Regression
+   >> real-value quantity를 예측(predict)하는 problem
+   >> Loss Function: Mean Squared Error(MSE)
 
 [D] Optimizers
  - Stochastic gradient descent
  - Stochastic gradient descent with momentum 
  - Root mean square propagation
  - Adaptive moment estimation
+
+------------------------------------------
+
+RNN
+ - Recurrent Neural Network
+
+Problem
+ - 매 point마다 이전 단어에 기반해서 다음 단어를 예측하는 문제
+
+RNN 특징
+ - Feedforward NN과 비슷
+ - Feedforward NN과 다른 점: RNN에는 feedback loop가 있다
+ - feedback loop가 있다는 것의 의미
+   >> 이전(previous) step들의 특징을 현재(current) step에 반영!
+ - 이러한 feedback loop를 가지는 RNN의 architecture는 시퀀스(순서형 정보)를 생성함
+ - 상황을 시뮬레이션하고 종합적인 데이터를 생성하는 시퀀스를 생성
+ - sequence data 모델링에 이상적임
+ - sequence data 예시) speech text mining, image captioning, time series prediction, robot control, langauge modeling 등
+ - [RNN의 핵심] 
+   >> Output layer -> Hidden layer로 피드백
+   >> Hidden layer -> 이전 Hidden layer로 피드백
+   >> Hidden layer -> Input layer로 피드백
+
+RNN의 단점
+ - ... 
+
+LSTM
+ - Long Short Term Memory (LSTM)
+ - ...
+
+RNN vs. LSTM
+ - ... 
 
 
 
