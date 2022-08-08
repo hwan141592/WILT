@@ -112,19 +112,68 @@ RNN 특징
    >> Hidden layer -> Input layer로 피드백
 
 RNN의 단점
- - ... 
+ - Memory heavy: 메모리를 많이 사용한다.
+ - long-term temporal dependency를 학습하기 어렵다.
+  >> e.g.) 장문의 context
 
 LSTM
  - Long Short Term Memory (LSTM)
- - ...
+ - RNN의 LTD 단점을 보완하기 위해 고안된 architecture
+ - long-range dependency를 가능하게 함
+
+LSTM 구조
+ - linear한 memory cell을 사용하여 더 잘 기억할 수 있도록 한다.
+ - linear memory cell들은 gate unit 세트로 둘러싸여 있음.
+ - gate unit들은 정보의 흐름을 control함.
+ - 정보의 흐름 examples
+   >> 언제 정보가 memory에 들어올지, 언제 정보를 잊어버릴지, 언제 정보를 내보낼지 등
+ - recurrent component에서 activation function은 사용하지 않으므로, 
+   back propagation을 하더라도 gradient term이 사라지지(vanish) 않는다.
 
 RNN vs. LSTM
- - ... 
+ - RNN: RNN의 반복되는 module은 single layer를 내포한다.
+ - LSTM: LSTM의 반복되는 module은 4개의 interacting layer들을 내포한다.
+   >> interacting layer들: activation function 통과하지 않음!
 
+------------------------------------------
 
+CNN
+ - Convolutional Neural Network
 
+Feedforward NN의 한계점?
+ - pixel과 같은 spatial structure에 적용하기 어렵다.
+ - local 패턴보다 global 패턴을 학습하다 보니 사진에 있는 객체와 같은 특정 부분의 탐지가 어렵다.
+ - 즉, 이미지에서 특정 object가 어디에서 나타나든 탐지가 어렵다.
+ - 따라서 이미지 분석에 특화된 NN 솔루션이 필요 -> CNN.
 
+Convolutional Neural Network 특징
+ - so called 'ConvNet', or 'CNN'
+ - 이미지를 인풋으로 받을 수 있고 이미지 속의 다양한 aspect/object들에 중요도(가중치)를 줄 수 있는 DL 알고리즘
+ - 여러가지 서로 다른 객체들을 구분할 수도 있음.
 
+CNN의 특징(이어서)
+ - input은 이미지(tensor)여야 함 (assumption)
+ - 이 assumption은 CNN을 최적화시키고 다른 NN과의 차이를 만드는 부분임.
+ - 다른 classification 알고리즘들에 비해 전처리량이 비교적 적다.
+ - computer vision에 매우 효과적인 것으로 증명되었음.
+   (e.g. recognizing cats, dogs, planes and hot dogs)
+
+CNN의 특징(이어서) 
+ - relevant filter들을 활용해서 Spatial(공간적인) & Temporal(일시적인) dependency를 캡처할 수 있음.
+ - filter들 예시: 가로선을 찾는 filter, 세로선을 찾는 filter, 등
+ - 이미지 데이터셋에 보다 잘 fit된다.
+   >> 포함된 parameter 갯수가 줄어들고 weight를 재사용할 수 있기 때문.
+ - 즉, CNN은 이미지의 복잡함을 이해하도록 학습(train)될 수 있음
+
+CNN 핵심 개념(key concepts)
+[1] Convolutional Layer (CONV Layer)
+ - ...
+[2] Pooling Layer (POOL Layer)
+ - ...
+[3] Fully Connected Layer (FC Layer)
+ - ...
+[4] Parameter Sharing
+ - ...
 
 
 
