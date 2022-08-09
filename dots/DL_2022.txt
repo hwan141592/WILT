@@ -167,20 +167,21 @@ CNN의 특징(이어서)
 
 CNN 핵심 개념(key concepts)
 [1] Convolutional Layer (CONV Layer)
- - ...
+ - 학습 filter들 set
+ - 이 filter들은 spacial 특징들을 잡아내는 역할
+ - output: 각각의 filter들로부터 나온 2차원 activation map들이 stacked된 결과
 [2] Pooling Layer (POOL Layer)
- - ...
+ - spatial size와 parameter 개수를 줄여주기 위한 down-sampling layer
+ - 이 pooling layer 또한 overfitting을 조절하는 역할을 돕는다.
+ - POOL Layer는 CONV Layer들 사이에 insert해준다.
+ - down-sampling을 할 때에 사용하는 함수들 e.g.) max, average, L2-norm
 [3] Fully Connected Layer (FC Layer)
- - ...
+ - 이전 layer에 있는 모든 뉴런과 연결되어 있는 layer
+ - classification task를 수행하는 것을 돕는다.
 [4] Parameter Sharing
- - ...
-
-
-
-
-
-
-
+ - CONV layer 이외에 CNN의 또 하나 특징으로 parameter sharing이 있음.
+ - CONV layer는 filter들마다 같은 weight(가중치) set을 사용한다.
+ - 따라서 전체적으로 필요한 parameter 수를 줄일 수 있게 됨.
 
 
 
