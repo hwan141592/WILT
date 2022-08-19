@@ -1,0 +1,214 @@
+===============================================================
+===============================================================
+*** Ch.6 ~ Ch.8 ***
+===============================================================
+
+
+===============================================================
+===============================================================
+[Ch.6] References 
+
+[Why] Literature Search를 해야 하는 이유
+ - 왜 논문조사를 해야 하는가?
+ - Novelty: 기존 이론, 실험 결과 등을 파악해야 함
+ - Methods: 내가 연구에 사용할 수 있는 방법 파악
+ - Comparison: 내 결과가 타당한지 비교 검토
+
+[How] Literature Search를 하는 방법
+ - Thinking >> Seqrch Question >> Search Plan >> Research Results >> Review
+ - 3가지 가장 자주 쓰는 툴
+    Tool.1) Google Scholar 서치엔진력 굿
+    Tool.2) Web of Science 정보는 확실 but 업데이트 시간이 약간 걸림
+    Tool.3) Pubmed 주로 의학/약학 관련 자료들
+ - 보통 100번 이상 인용된 논문: 그 분야에서 굉장히 유명
+ - 보통 50번 이상 인용된 논문: 대부분 알고 있는 논문
+ - 보통 10번 이상 인용된 논문: 꽤 유명한 논문
+
+Impact Factor
+ - 저널의 영향력을 수치로 나타낸 것
+
+Total Citation
+ - 쓴 논문들 모두의 citation의 총합
+
+h-index
+ - 개인의 연구력 측정
+ - [원문 논문 제목] An index to quantify an an individual's scientific research output
+ - Abstract 1문장짜리
+   "I propose the index h, defined as the number of papers with citation number >= h, as a useful index to characterize the scientific output of a researcher."
+
+Review Journals
+ - 한 분야의 summary를 해둔 저널
+
+Bibliography Management S/W
+ - 인용을 편하게 정리하는 사이트
+ - 1) Mendelley
+ - 2) Zotero
+ - 3) Colwiz - Accelerating Research
+ - 4) Endnote(유료 - 카이스트 무료)
+
+===============================================================
+===============================================================
+[Ch.7] Proofreading
+
+* 가능한 많은 사람들에게 보여줘라.
+
+* Check List: Figures
+ - scale bar, color bar & units
+ - 그림 속 약어들 모두 표현되었는지
+ - 그림 속 결과들 모두 본문에 있는지
+ - 본문에서 그림 호출 (Fig.1) 다음에 그림이 배치되었는지
+ - 문장 시작할 때는 Fig.라는 축약표기 대신 Figure라고 다 풀어쓰기
+ - 그림에서 subfigure가 (a)로 표기면 본문에서도 Fig.1(a)로 똑같이 쓰기
+
+* Check List: Results
+ - 결과로 확신할 수 있는 주장인지? 다른 가능성들은 없는지?
+ - 쉽게 설명이 되었는지?
+ - 'aaa'라는 방법을 썼다면 이 방법에 대한 간단한 내용을 한 줄로라도 표기해주어야 독립성 지킬 수 있음!
+ - 논리적인 비약은 없는지?
+
+* Check List: Text
+ - 약어: 처음 사용시 정의하고, 그 이후는 통일성 있게 쓰기. ctrl+f 활용
+ - 약어: 3번 이상 사용하는 경우만 약어 사용
+ - 약어: 초록과 본문의 별개의 문서 = 초록에서 약어 정의했어도 본문에 사용한다면 다시 정의해야 함
+ - 숫자 + 단위 사이에는 항상 space해주어야! 
+   >> Note! 예외: 10% & 10도씨(섭씨 단위 쓸때)
+ - You should not start a sentence with a symbol!
+
+* Check List: Refs. etc.
+ - 중복 사용된 참고문헌은 없는지
+ - Issue #, Page #, Yr 등 확인: Endnote가 완벽하지 않음
+ - Be professional: 단위 사용 등
+ - 모호한 표현 사용 금지!
+    * measured a lot of holograms -> measured 600 holograms
+    * has an enough power -> has a strong power (50 mW)
+    * measured ~ 10 cells -> measured 13 cells
+
+* Check List: English Usage
+ - 단어 뜻 제대로 알고 사용해야 함!
+   e.g.) Different: 다른 / Various: 다양한
+   e.g.) Concerns: 걱정 / Drawbacks: 단점
+ - 단수/복수 구분을 잘 해야 함! Countable vs. Uncountable
+ 
+[Countable]
+ - an algorithm, a technique, pathologies, reconstruction, implications, systems, illuminations, a PBS solution, a process, introductions, descriptions, a mixture, properties, cells
+
+[Uncountable]
+ - reconstruction, diffraction optical tomography, information, diagnosis, treatment, promise, molecular content
+
+
+English Usage: 전치사
+ - By 는 좋은 표현이 아님: 구체적으로 >> using or via 로 바꿀 것!
+
+Common mistakes 예시
+ - At Fourier space (X) >>> in Fourier space (0) 
+ - Study of human hairs (X) >>> Study on human hairs (0) 
+ - Findings of human hairs >>> I Findings on human hairs (0)
+ - Effects of A to B (X) >>> Effects of A on B (0)
+ - Most of bacterial species (X) >>> I most bacterial spices (0)
+ - Most of bacterial species (x) >>> most bacterial spices (0)
+ - Becomes problems (X)| pose problem (0)
+ - Requires using of ... (X) >>> Requires the use of ... (0)
+ - The both A and B (X) >>> both the A and B (0)
+ - Discuss about the implications (X) >>> Discuss the implications (0)
+ - in a large scale (X)] at a large scale (0)
+ - is in the order of 102(X) >>> is on the order of 102 (0)
+ - 4~10 times (X) >>> 4 to 10 times (0)
+ - 1.39~1.4 (X) >>> 1.39-1.4 (0)
+ - limited number of wavelength (X) >>> a limited number of wavelengths (O)
+ - Especially, ... (X) >>> In particular, ... (0)
+ - Access information about the ... (X) >>> Access to information about the (0)
+ - indicated with the arrowhead (x) >>> indicated by the arrowhead (0)
+ - 6 orders of magnitude (X) >>> six orders of magnitude (0)
+ - With the SML algorithm (x) \, using the SML algorithm (0)
+ - Enables us parallel investigations → enables parallel investigation (0)
+
+Stronger & More Formal Expressions
+ - Mainly → primary
+ - Is shown → in presented
+ - To demonstrate the feasibility → In order to demonstrate the feasibility
+ - Since (reason) → because (reason)
+ - Because of → due to, resulting from, as a result of (formal)
+ - Allows us to investigate → Enables the investigation
+ - Study → Investigate
+ - Play a central role (informal) → has a central function (formal)
+ - serious limitation → significant limitation
+ - enough → sufficient
+ - is performed → is conducted
+ - to check → to verify
+ - technical point of view → technical perspective
+
+===============================================================
+===============================================================
+[Ch.8] Revision + Appeal
+
+* Authorship
+
+* Coverletter
+ - What + why: 뭘 했는, 이게 왜 중요하다.
+ - What: 너희 저널 scope에 맞는다.
+ - Why: (신속히) 출판할 가치가 있다.
+ - Reviewer suggestion: 리뷰어 추천
+
+* Cover Letter 예시!
+---
+Dear Colleague:
+
+# 첫번째 문단에서는 페이퍼 요약
+We are submitting a paper entitled “Simultaneous 3-D visualization and position tracking of optically trapped particles using optical diffraction tomography" by K. Kim et al. for consideration to be published in Optica
+
+# What: 무엇을 했다
+The work propose and experimentally demonstrates, for the first time to our knowledge, a combined system employing optical diffraction tomography and holographic optical tweezers capable of simultaneous 3-D visualization of the shapes and tracking positions of trapped microscopic samples. Although various approaches for 3-D particle tracking have been proposed, most are limited in resolution and axial localization for complex samples. As presented in this work, holographic tomography systems, however, circumvent these problems and offer improved localization capability over current methods. We validate the capability of the proposed method for 3-D tracking of micrometer-sized particles from reconstructed tomograms, and compare the results obtained with axial reconstructions using the conventional angular spectrum method (ASM). In addition, 3-D tracking and visualization of a colloidal particle in the vicinity of biological cells is also demonstrated.
+
+# How: 어떻게 했다. strongly 좋은 점
+Although the particular focus of the paper is to demonstrate high-resolution 3-D visualization of optically trapped particles, the present technique is sufficiently broad and general and it will directly offers novel approaches for optical manipulation, soft matter physics, and biophysics. For example, we anticipate this technique to open new avenues for studying manipulating and simultaneous imaging of vesicles which can be used for the study of microrheology and complex colloidal system. It is for this reason, we strongly believe that the paper merits consideration and rapid publication in Optica.
+
+# 리뷰어 추천 >> 많은 경우 에디터가 이 추천을 대개 따라감
+# 같은 학교/학과 교수 혹은 인연이 있다면 대부분 배제됨
+# 그 필드에서 제일 강력한 사람에게 페이퍼를 보내면 네트워킹!
+# 심사 배제 요청은 이런 비슷한 연구를 하고 있는 사람들을 알고 있는 경우 제외 부탁 or 공동연구중인 사람(우호적인 평가를 줄 수 있는 사람들을 배제해달라 = 굿신용!)
+
+Suggested reviewers to include: Myung Kim (University of South Florida, USA, mkkim @usf.edu); Kishan Dholakia (University of St Andrews, UK, kd1 @st-andrews.ac.uk); Bahram Javidi (University of Connecticut, USA, bahram @engr.uconn.edu); Gabriel Popescu (UIUC, USA, gpopescu @illinois.edu); and Vinothan N. Manoharan (Harvard University, USA, vnm@seas.harvard.edu)
+
+We look forward to hearing from you.
+
+Sincerely, Yongkeun (Paul) Park
+---
+
+* Editor는 다음을 기준으로 Reviewer를 선정함.
+ - 기본적으로 많은 경우, 레퍼런스에 있는 논문들의 저자에게 리뷰어 요청이 가는 경우가 많음!
+[1] Knowledgeable specialists in the main topic who give high quality reviews
+[2] Finding potential reviewers:
+ - Use the manuscript bibliography
+ - Search database: Bibliographies of papers published by authors who are in the manuscript bibliography
+ - Author suggestions: ensure there are no conflicts of interest
+[3] Authors may request that someone not review: try to honor request
+
+
+First Decision
+ - ACCEPT (AS IT IS)
+ - ACCEPT (WITH MINOR REVISION)
+ - REVISION (MINOR)
+ - REVISION (MAJOR)
+ - REJECT
+
+REBUTTAL LETTER
+ - 성실하고 겸손하게 답변할 
+ - 결론 문장부터 쓰고, 자세히 풀어 쓸 것
+ - Rebuttal Letter는 자세히, 본문 수정은 최소화
+ - 하라고 한 것은 반드시 할 것
+ - Ref Suggestion: 반드시 할 것
+ - 다른 리뷰어의 커멘트를 활용하여 답변할 것
+ - 기존 연구 결과 언급하면서 답변하면 설득이 쉬움
+
+Cover Letter
+Rebuttal Letter
+ - Referee comment는 검정색
+ - 우리의 답변은 파란색
+ - 본문의 수정사항은 하이라이트했다
+
+============ 학술논문작성법 강의 수강 DONE ===========
+===============================================================
+===============================================================
+
+
+
