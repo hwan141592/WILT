@@ -91,3 +91,5 @@ Here, we present an experimental study to systematically investigate... 오리�
 [3. ABSTRACT: example]
 We investigate 오리들이 도로를 건너는 패턴 and found 이유. Using GPS-equipped drones, 오리들의 도로 횡단은 주변 산책로에서 서식하는 고양이들의 행동 양식과 매우 밀접한 관계가 있다는 것을 밝혀냈다. 이러한 오리들의 도로 횡단 행동양식은 고양이들의 계획된 집단 이주를 통해 더 확실히 규명되었으며, 위협을 느낄 때 발현되는 Kaitronin 호르몬과의 관련성도 연구했다.
 
+
+* source: 학술논문작성법 / KOOQ
