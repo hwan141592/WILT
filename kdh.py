@@ -1,12 +1,21 @@
+# packages
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+
+
+# need to install
 import seaborn as sns
 from sklearn.preprocessing import StandardScaler 
+
+
+# settings
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 pd.set_option('display.width', 1000)
 
+
+# User Defined Functions
 def map_many(iterable, function, *other):
     if other:
         return map_many(map(function, iterable), *other)
@@ -83,3 +92,4 @@ def h1t1(df):
 def h2t2(df):
     print(df.shape)
     display(df.head(2), df.tail(2))
+
