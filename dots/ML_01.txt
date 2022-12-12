@@ -1,0 +1,544 @@
+----------------------------------------------------
+ - 01. Introduction to Machine Learning
+ - 02. Supervised Learning: Classification (Support Vector Machines, K Nearest Neighbors)
+ - 03. Unsupervised Learning: Clustering (K-Means, Hierarchical Clustering)
+ - 04. Unsupervised Learning: Clustering (Gaussian Mixture Model, Expectation Maximisation Model)
+ - 05. Unsupervised Learning: Dimension Reduction (Principal Component Analysis)
+ - 06. Model Diagnosis and Tuning
+ - 07. Ensemble Learning: Boosting: (AdaBoost, Gradient Boosting, XGBoost, LightGBM)
+ - 08. Text Analytics: Text Mining, Data Processing Concepts
+ - 09. Text Analytics: Data Pre-processing
+ - 10. Text Analytics: Data Exploration
+ - 11. Text Analytics: Model building
+ - 12. Deep Learning: Artificial Neural Networks, Recurrent Neural Networks, Convolutional Neural Networks
+----------------------------------------------------
+*** (a) / 01-01. ***
+ - Statistics, DA, Data Mining, DS
+ - 데이터마이닝 >> 머신러닝 : 데이터마이닝이 더 넓은 범위
+ - 머신러닝: teaching computers how to use data to solve a problem
+ - 데이터마이닝: identify pattern that humans then use to solve a problem
+
+
+
+*** (c) ***
+
+계층적 군집분석
+ - 모든 데이터를 한 그룹부터 시작 : divisive clustering
+ - 각각의 데이터를 그룹으로 시작: agglomerative
+
+Resampling
+ - 어떤 케이스에서는 RUS(언더샘플링)가 베스트.
+ - 메트릭과 비즈니스 문맥을 바탕으로 결정해야 함.
+
+지도학습 2가지 = Regression & Classification
+ - Regression: LR, MLR, Logistic R
+ - Classification: SVM, kNN 
+
+
+[데이터마이닝 알고리즘] (카테고리)
+1. Classification 알고리즘
+ - kNN, Naive Bayes, Decision Trees, Rules-based, NN, SVM, Gradient Boosting Machine
+2. Numeric Prediction 
+ - Regression
+3. Clustering 알고리즘
+ - K-Means, Outlier detection analysis
+4. Association 알고리(market basket 분석)
+
+[비정형 데이터 알고리즘]
+1. Text Mining
+ - Dictionary Based Approach
+ - Supervised text classification
+ - Unsupervised topic modeling
+2. 비정형 데이터 종류
+ - Image
+ - Audio
+ - Video
+
+[Terms]
+ - unit of observation >> 행 / 레코드 를 나타내는 용어
+ - CS 문헌에서는 'Example' 사용
+ - tuple = record = observation = sample
+
+
+
+*** f. *** 
+ - kNN: CV에서 이용됨
+ - 그 사람이 영화를 즐길지 안 즐길지
+ - 음악추천
+ - 유전자 데이터 패턴 식별
+ - strength & weakness
+ - min max 정규화 >> (X - min) / (max - min) >> (0,1)
+ - 표준화: Z-score 표준화 >> (X - mu) / sigma >> (- , +)
+ - Measuring Distance: 
+
+
+
+*** g. unsupervised ***
+ - 비지도: 질병 발견, document clustering, 인구통계기 고객분류
+ - 비지도 예시: k-means, 계층적군집분석, 가우시안 믹스처
+
+
+
+*** h. k-means ***
+ - step.1: k 센트로이드가 정해짐 & 모든 점의 클러스터가 정해짐
+ - step.2: 센트로이드가 다시 계산됨 & step.1 반복
+ - 한계점
+   1) 처음에 클러스터 갯수가 정해져야 함
+   2) 바운더리가 선형이어야 함
+   3) 샘플 수가 많으면 느릴 수 있음
+   4) 이상치가 있으면 왜곡될 수 있음
+   5) 클러스터를 라벨링하는 것
+ - 파라미터 >> n_jobs = -1 >> 코어 모두 사용
+ - Average Silhouette Method
+   >> 높을 수록 클러스터 안에서는 well matched.
+              다른 클러스터와는 weakly matched
+
+
+
+*** i. 계층적 hierarchical 군집
+ - observation들을 segmenting하는 데에 아주 유용한 방법
+ - 컴퓨팅 코스트 많아서 작은 데이터셋에만 사용.
+ - 2가지: Agglomerative(하나씩에서 뭉치기 = bottom up) >> 작은 클러스터 찾는데 유리 
+         Divisive(top down) >> 큰 클러스터 찾는데 유리
+
+
+
+*** j. 가우시안 믹스처
+배경
+ - k-means는 클러스터 모양의 유연성이 부족
+ - k-means는 클러스터 할당 확률의 유연성이 부족
+2가지 메인 특징
+ 1) compare the distance of each point to all cluster centers
+ 2) non-circular 모양의 클러스터 설명 가능.
+
+최적의 n_component 구하는 방법 2가지
+ - AIC 
+ - BIC
+ - n_component 구하는 것은 클러스터링이 아니라 density estimator의 영역임.
+
+
+
+*** k. PCA
+차원축소 2가지 방법 
+ - feature selection  : 피처 몇 개를 선택하여 사용 >> 새로 추가되는 피처 없음.
+ - feature extraction : 데이터를 설명하는 새 피처를 추출하는 것 >> 예시) PCA !!!
+
+
+
+*** l. Model ETID
+비지도학습 평가 방식 2가지
+ - External validation >> 외부에서 도메인 지식에 바탕해서 라벨링을 한 것과 비교
+   >> Homogeniety, Completeness, V-measure >> 모두 0~1 사이 값 & 높을수록 좋음.
+ - Internal validation >> 클러스터 내부에서 metric들을 정의하여 metric 값을 비교
+   >> 좋은 클러스터의 2가지 특징: Compact group & Well separated group
+   >> 유클리디안 거리, 맨하탄 거리 등을 이용해서 아래의 metric들을 사용
+   >> Internal validation Metrics: 
+        >> Silhouette Coefficient(-1,1), Calinski-Harabasz Index(값,1000...)
+
+Silhouette Coefficient
+ - compact & Well-separated 2가지를 모두 고려하는 메트릭
+ - similarity는 클러스터에 포함시키고 & dissimilarity는 클러스터에서 빼고.
+ - (-1, 1) 범위를 가지며 1이 잘 된 클러스터링.
+
+Calinski-Harabasz Index
+ - ratio of [between-clusters dispersion mean] & [within-cluster dispersion]
+ - 값이 클수록 dense & well-separated
+ - 값이 100, 1000, 10000이 될 수도 있음.
+
+모델 튜닝 방법 4가지
+ - Hyperparameters
+ - Bias-Variance Tradeoff
+ - Cross Validation
+ - Hyperparameter tuning strategies
+
+Bias: 모델 가정이 잘못됨 / 예측과 실제의 차이.
+Variance: 모델 민감도 때문 / 랜덤니스, 노이즈 등 >> high variance: 일반화가 안 됨
+
+좋은 모델이란,
+ 1) 키 패턴을 capture
+ 2) 충분히 generalized 
+
+Bias
+ - 모델 정확도가 낮으면 >> under-fitting & high bias
+ - high bias 원인: 좋은 피처가 없거나 or polynomial degree 올바른 순서가 아님
+ - high bias 해결: 좋은 피처를 추가 or higher degree(polynomial)로 모델복잡성 향상
+
+Variance
+ - train에서는 높은 모델 정확도, test에서는 낮다면 >> over-fitting & high variance
+
+***** 오버피팅 = high variance!!! ***** 
+
+오버피팅 해결
+ - feature 개수를 줄인다
+ - 차원 축소
+ - 데이터를 추가
+ - 적절한 model parameter를 선택
+   >> Using right regularization parameters can decrease variance in 
+      regression-based models.
+   >> For a decision tree, reducing the depth of the decision tree
+      will reduce the variance.
+
+Hyperparameter Tuning 전략 2가지
+ - Grid Search >> systemic way
+ - Randomized Search >> randomly 
+   >> control the number of times we want to do random parameter sampling
+   >> 'n_iter' parameter tuning
+
+feature importance
+ - skater 패키지
+
+Model Deployment 3가지
+ - Model persistence >> pickle 패키지, joblib 패키지
+ - In-house model deployment >> 
+ - Model deployment as a service
+
+
+
+*** m
+3 Simple Ensemble Methods
+  >> Max Voting, Averaging, Weighted Averaging
+3 Advanced Ensamble Models
+  >> Stacking
+  >> Bagging 
+  >> Boosting
+
+Ensemble의 이점
+ - Better generalizability to future problems
+ - Improved performance on massive or miniscule datasets
+ - The ability to synthesize data from distinct domains
+ - A more nuanced understanding of difficult learning tasks
+
+Max Voting
+ - 쓰임새: 주로 classification problem에 쓰임
+ - vote, majority, final prediction >> mode
+Averaging
+ - 쓰임새: Regression or Classification with probability
+ - Take an average of predictions from all the models 
+   and use it to make the final prediction.  
+Weighted Averaging
+ - All models are assigned different weights 
+   defining the importance of each model for prediction.
+
+Stacking
+ - uses predictions from multiple models
+ - e.g. decision tree, knn or svm to build a new model
+Bagging
+ - Bootstrap AGGregatING
+ - 아이디어: 일반화된 결과를 얻기 위해서 여러 모델들의 결과를 combine!
+ - 문제점: 같은 데이터를 사용해서 모델들을 만들면 결과가 아주 비슷할 것
+ - 해결법: use bootstrapping
+   >> bootstrapping: sampling technique
+ - Summary: 오리지널 데이터 >> 서브셋1, 서브셋2, 서브셋3, ... 
+              >> 모델1, 모델2, ... >> combined prediction
+Boosting
+ - sequential process
+ - 다음에 오는 모델이 이전의 모에 있었던 오차를 수정하고 줄이는 방식
+ - 다음에 오는 모델은 이전 모델에 dependent함
+ - Bagging과의 차이점
+   >> Bagging 컨셉: combining & averaging the models
+   >> Boosting 컨셉: 점진적으로 베이스 모델을 sequentially training
+ - 이전 모델의 error를 수정하려다 보니 over-fitting 되기 쉬움.
+ - Boosting의 예시) AdaBoost, Gradient Boosting, XGBoost(popular!)
+
+Bagging & Boosting 
+ - 공통점: ensembles of models trained on resampled data
+ - 차이점:
+ - 1) key difference
+    >> Boosting에서는 리샘플링한 데이터에서 vote가 모델의 퍼포먼스에 따라 가중(weighted based on) 적용
+    >> Bagging에서는 equal한 vote
+ - 2) Bagging에서는 individual 모델이 parallel하게 built됨
+      Boosting에서는 individual 모델이 sequential하게 built됨
+ - 핵심! Boosting은 previous 모델에 영향을 많이 받음! 에러 줄이려고!
+
+
+
+*** n. XGBoost & LightGBM
+ - GBM: Gradient Boosting Machine
+    >> GBM은 Generalized boosting algorithm이다. (즉 일반화된 부스팅 알고리즘)
+
+Gradient Boosting
+ - Gradient Boosting은 GBM의 하나의 example implementation임.
+ - 여러 Loss function들(regression, classification, risk modeling 등)과 함께 쓰일 수 있음
+ - gradient descent & learning rate 업데이트 >> predict with min. MSE
+
+Gradient Boosting Steps
+ - 1) model the simple model
+ - 2) 이전 모델에서의 not-fit 데이터를 맞추기 위해 focus
+ - 3) 각각의 predictor에 가중치(weight) 주어서 combine >> 최종 모델!
+
+Essential Tuning Parameters
+ - model complexity & over-fitting 조절하는 2가지 튜닝 파라미터
+ - 1) Tree structure
+ - 2) Regularization parameter
+
+1) Tree Structure
+ - n_estimator, max_depth, min_sample_leaf, subsample
+2) Regularization parameter
+ - learning_rate
+   * learning_rate가 낮을 수록 좋음 
+       >> higher n_estimator(=weak learniner 갯수)와 trade-off
+
+
+[XGBOOST] (드디어!) ***** 
+ - XGBOOST = Extreme Gradient Boosting
+ - extended & more regularized version of Gradient Boosting
+ - "optimized regularization" 덕분에 GBM보다 성능이 좋음!
+
+XGBoost 장점
+ - 1) 빠르다! Parallel Computing >> 모든 core를 사용해서 processing함.
+ - 2) 정확함! Regularization >> XGBoost의 가장 큰 장점!
+           >> tree-based 모델에서 overfitting을 피하기 위한 효율적인 방법.
+ - 3) cross-validation이 가능함! 
+       >> cross-validation 함수를 내재하고 있음.
+ - 4) Flexibility in Features
+       >> scaling 없이 수치형/명목형 변수 가능
+ - 5) Flexibility in Predicted values
+       >> user-defined objective objective function도 가능.
+       >> user-defined evaluation metric도 지원함!
+ - 6) Availability
+       >> available in R, Python, Java, Julia, Scala, ...
+
+XGBoost Parameters
+ - Most are about bias & variance!
+ - A) General parameters
+ - B) Boosting parameters
+ - C) Task parameters
+
+XGBoost Parameters - <General params>
+1) nthread
+ - Number of parallel threads; 
+ - if not given a value, all cores will be used
+2) Booster
+ - the type of model to be run with gbtree 
+ - tree-based model being the default
+ - 'gblinear' to be used for linear models
+
+XGBoost Parameters - <BOosting params>
+1) eta
+ - learning rate across rounds
+ - eta가 낮을수록 computation 느려짐.
+2) max_depth
+ - maximum depth of tree
+ - default: 6
+ - depth가 클 수록 모델이 더 복잡함 >> overfitting 확률 높음
+3) min_child_weight
+ - default: 1
+ - Regression에서는, child node에 필요한 최소한의 instance 갯수를 의미
+ - Classification에서는, 
+    >> if the leaf node has 
+       a minimum sum of instance weight lower than min_child_weight, 
+       the tree splitting stops.
+ - overfitting을 방지하는 또 하나의 parameter임.
+4) colsample_bytree
+ - It control the number of features(variables) 
+   supplied to a tree with default value of 1
+5) Subsample
+ - controls the number of samples (observations) supplied to a tree
+ - default: 1
+ - Lowering this value makes algorithm conservative to avoid overfitting
+6) lambda
+ - controls L2 regularization (equivalent to Ridge regression) on weights
+ - default: 1
+ - overfitting 피하는 데 사용됨
+7) alpha
+ - controls L1 regularization (equivalent to Lasso regression) on weights
+ - Shrinkage와 더불어, enabling alpha also results in feature selection
+ - high dimensional 데이터셋에 더 유용함.
+
+XGBoost Parameters - <Task params>
+1) objective
+ - defines the loss function
+ - default: 'reg:linear'
+   >> a) 'reg:linear': linear regression
+   >> b) 'binary:logistic':
+            >> logistic regression for binary classification. 
+               It returns class probabilities
+   >> c) 'multi:softmax'
+            >> multiclassification using softmax objective. 
+            >> It returns predicted class labels. 
+            >> It requires setting num_class parameter 
+               denoting number of unique prediction classes.
+   >> d) 'multi:softprob'
+            >> multiclassification using softmax objective
+            >> It returns predicted class probabilities.
+2) eval_metric
+ - These metrics are used to evaluate a model's accuracy on validation data.
+ – For regression, default metric is RMSE.
+ – For classification, default metric is error.
+ – Available error functions are as follows:
+  • MAE - Mean Absolute Error (used in regression)
+  • Logloss - Negative loglikelihood (used in classification)
+  • AUC - Area under curve 
+          (used in classification with predicted probabilities)
+  • error - Binary classification error rate 
+            [#wrong cases/#all cases]
+  • mlogloss - multiclass logloss (used in classification)
+
+
+
+[LightGBM] (드디어!) ***** 
+ - 데이터가 커지면 XGBoost는 train하는 데 시간이 오래 걸림
+ - 그래서 LightGBM~!
+ - LightGBM은 빠르고, distributed, 고성능의 gradient boosting framework
+ - Tree-based 모델이며 ranking과 classification, 그리고 많은 다른 ML task에 쓰임.
+
+LightGBM 특징
+ - splits the tree leaf-wise.
+ - leaf-wise는 모델 complexity를 증가시킴 
+    -> overfitting을 야기함 
+      -> max_depth 파라미터를 통해 이를 극복해줌. 
+        -> (max_depth: 어느 깊이까지 splitting을 할 것인지)
+
+LightGBM 특징들(이렇게 디자인되었음)
+ - Faster training speed and higher efficiency.
+ - Lower memory usage.
+ - Better accuracy.
+ - Support of parallel and GPU learning.
+ - Capable of handling large-scale data.
+
+Evolution of Boosting
+ - AdaBoost >> GBM >> XGBoost >> LightGBM
+ - LightGBM
+   >> 큰 데이터에서 accuracy를 희생하거나 비슷한 상태에서 XGBoost의 속도를 높이는 것!
+   >> XGBoost보다 accuracy도 좋다고들 알려져 있음!
+
+LightGBM Parameter! (89~92pg)
+ - task, application, data, num_iterations, num_leaves, device, 
+   max_depth, min_data_in_leaf, feature_fraction, bagging_fraction, 
+   min_gain_to_split, max_bin, min_data_in_bin, num_threads, label,
+   categorical_feature, num_class
+
+LightGBM Parameter Tuning
+ - For Best Fit >> num_leaves, max_depth, min_data_in_leaf
+ - For Faster Speed >> baggin_fraction, feature_fraction, max_bin
+ - For Better Accuracy >> num_leaves, max_bin
+    >> (For better accuracy, also can use bigger training data!)
+
+
+XGBoost vs. LightGBM
+ - 우리의 case에서는 accuracy와 auc는 비슷했다!
+ - but, 실행시간(execution time)에 대해서는, LightGBM이 훨씬 빠름! (이 경우 8배)
+
+
+
+*** o. Text Mining 
+(대분류) 5가지 Use Case
+[1] Extract 'Meaning' from unstructured text
+[2] Automatic text categorization
+[3] Improving predictive accuracy in predictive modeling or 비지도학습
+[4] Identifying specific or similar/relevant documents
+[5] Extracting specific information from the text ('Entity extraction')
+
+[1] Extract 'Meaning'
+ - 1) Sentiment Analysis
+ - 2) Trending themes in a stream of text
+     >> alert system / 변화 감지
+ - 3) Summarizing text
+     >> 3-1) summarize themes
+     >> 3-2) summarize the contents
+
+[1]에서 공통적으로, 
+ - ... 
+ - ... 
+ - Statistical analysis of words & words frequency
+    1) Statistical natural language processing
+    2) Statistical summaries of word or word counts
+    3) Statistical analysis of dimensions of meaning
+
+[Text Data Pre-Processing]
+1. Convert to lower case and tokenize
+  • Sentence tokenizing
+  • Word tokenizing
+2. Removing noise
+3. Part of speech (PoS) tagging
+4. Stemming
+5. Lemmatization
+6. N-grams
+7. Bag of words (BoW)
+8. Term Frequency-Inverse Document Frequency (TF-IDF)
+
+Term Document Matrix(TDM) in Bag of Words
+ - row      : terms
+ - column   : document names
+ - cell     : frequency of words
+
+TF: Term Frequency
+DF: Document Frequency
+IDF: log(DF^(-1))
+TF-IDF = weight product of quantities
+
+
+
+*** p. BT5151p-TextMining-DataProcessingConcepts *** 
+
+
+
+*** q. Data Pre-Processing ***
+1. Choose the scope of the text to be processed (documents,
+paragraphs, etc.).
+2. Tokenize: Break text into discrete words called tokens.
+ - (1) Smart tokenization
+ - (2) Adjusting the downstream processing
+3. Remove stopwords (“stopping”): Remove common words such
+as the.
+4. Stem: Remove prefixes and suffixes to normalize words – e.g.
+run, running, and runs would all be stemmed to run.
+ - popular Stemming 알고리즘 2개
+    >> 1) Snowball Stemmer
+    >> 2) Lemmatization
+5. Normalize spelling: Unify misspellings and other spelling
+variations into a single token.
+ - 3가지 Spelling Correction Approach
+    >> 1) Dictionary-based approaches
+    >> 2) fuzzy matching algorithms
+    >> 3) Word clustering and concept expansion techniques
+6. Detect sentence boundaries: Mark the ends of sentences.
+ - 'statistical classification techniques'가 보통 사용됨
+7. Normalize case: Convert the text to either all lower or all
+upper case.
+
+* 이렇게 pre-processing이 모두 끝나면 token -->> vector 로 변함.
+* 이 vector는 아래 3가지 중 한 가지 형태
+ 1) a binary representation,
+ 2) an integer count, or
+ 3) a float-valued weighted vector
+
+
+
+*** r. Text Mining Data Exploration ***
+Contents
+ - [Frequency Chart]
+ - [Word Cloud]
+ - [Lexical dispersion plot]
+ - [Co-occurrence matrix]
+
+
+
+*** s. Model Building (BT5151s-TextMining-ModelBuilding)
+Contents
+ - [1] Text Similarity
+ - [2] Text Clustering
+     >> 2-1] Latent semantic analysis (LSA)
+              >> 문서들 안에서 latent 관계를 찾는 것
+              >> 모든 문서들을 범위로 해서 찾
+     >> 2-2] Singular Value Decomposition (SVD)
+              >> matrix decomposition
+              >> singular vector를 찾아감.
+              >> SVD: summarization based 알고리즘
+                       또는 차원축소에 유용함
+ - [3] Topic Modeling
+     >> 3-1] Latent Dirichlet Allocation (LDA)
+     >> 3-2] Non-negative matrix factorization
+ - [4] Text Classification
+ - [5] Sentiment Analysis
+
+
+
+*** t. Deeplearning *** (따로)
+ - 따로 문서에 정리.
+----------------------------------------------------
+
+
+
+
+

@@ -1,0 +1,186 @@
+Deep Learning
+ - 3 Types of Neural Networks: ANN, RNN, CNN 
+	[1] ANN(Artificial Neural Network)
+	[2] RNN(Recurrent Neural Network)
+	[3] CNN(Convolutional Neural Network)
+ - MLP: Multilayer Perceptron 
+
+------------------------------------------------------
+[1] ANN (Artificial Neural Network)
+ - one end: observation's feature value
+ - the other end: target value (observation's class)
+ - Goal: output과 타겟 값과 같도록 예측/분류하는 것
+
+Feedforward NN 설계하기
+ 1) hidden & output 레이어마다 'unit의 개수' & 'activation function'을 정의한다.
+ 2) hidden layer의 갯수를 정의한다.
+   >> hidden layer 갯수가 많을수록 더 복잡한 학습 가능 but computational cost 높음!
+ 3) (필요하다면) output layer의 activation function의 구조를 정의한다.
+ 4) loss function을 정의한다.
+ 5) optimizer를 정의한다.
+ 6) evaluation metric을 정의한다.
+
+(패턴) Hidden Layer 안의 각각의 Unit들
+ 1) 많은 input을 받는다.
+ 2) 각각의 input에 weight(가중치)를 준다.
+ 3) 가중된 input 값을 모두 더한다.
+ 4) activation function을 적용한다. (ex. ReLU)
+ 5) output을 다음 layer의 유닛으로 보낸다.
+
+(패턴) Output Layer의 패턴
+ 1) Binary Classification
+   >> one unit with sigmoid activation function
+ 2) Multiclass Classification
+   >> k units & softmax activation function
+   >> 'k': number of target classes
+   >> 'softmax': normalizes it into a probability distribution of interval (0,1)
+ 3) Regression
+   >> one unit with no activation function
+
+Loss Function (Output Layer에서)
+ - Binary Classification >> Cross-Entropy(=Logarithmic loss)
+ - Multiclass Classification >> Categorical Cross-Entropy
+ - Regression >> Mean Squared Error (MSE)
+
+Optimizer 종류 4가지
+ - Stochastic gradient descent
+ - Stochastic gradient descent with momentum
+ - Root mean square propagation
+ - Adaptive moment estimation
+
+------------------------------------------------------
+[2] RNN(Recurrent Neural Network)
+
+Background(Problem)
+ - Predict the next word based on the previous word at every given point
+
+RNN's resolution
+ - RNN is similar to Feedforward NN
+ - But RNN has a feedback loop!
+ - Feed previous time steps into the current step
+ - Speech text mining, Image captioning, 
+   Time-series prediction, robot control, language modeling
+
+RNN의 단점(Drawbacks)
+ - Memory Heavy
+ - long-term temporal dependency를 train하기 어려움
+    >> ex) context of long text should be known at any given stage
+ - 이 단점을 해결하기 위해서 LSTM이 고안됨!
+
+LSTM (Long Short Term Memory)
+ - LSTM enables long-term dependencies.
+ - 'Linear Memory Cells surrounded by Gate Units'
+    >> control the flow of information
+    >> ex) when information should enter the memory,
+           when to forget the information,
+           when to output
+ - no activation function with its recurrent component
+    >> thus, the gradient term does not vanish with back propagation
+
+------------------------------------------------------
+[3] CNN(Convolutional Neural Network)
+
+
+Limitation of Feedforward NN
+  (한계점.1) spatial structure를 고려하지 않음.
+  (한계점.2) feature들의 global relationship만 학습하고 local pattern은 학습하지 못함.
+    >> 이미지의 어디에 나타나는지와 상관 없이 object를 detect하지 못함.
+
+
+CNN이란?
+ - Convolutional Neural Network
+ - a Deep Learning algorithm which can take in an input image, assign importance (learnable weights and biases) to various aspects/objects in the image and be able to differentiate one from the other
+ - The additional explicit assumption of input being an image (tensor) is what makes CNNs optimized and different from the usual neural networks.
+ - The pre-processing required in a ConvNet is much lower as compared to other classification algorithms.
+ - Has been proven very effective at computer vision 
+    >> (e.g.,) Recognizing cats, dogs, planes, and even hot dogs
+ - Able to successfully capture the Spatial and Temporal dependencies in an image through the application of relevant filters.
+ - The architecture performs a better fitting to the image dataset due to the reduction in the number of parameters involved and reusability of weights.
+ - In other words, the network can be trained to understand the sophistication of the image better.
+
+
+
+Key Concepts of CNN
+ - CNN의 핵심 개념 4가지
+    1) Convolution Layer (CONV Layer)
+    2) Pooling Layer (POOL Layer)
+    3) Fully Connected Layer (FC Layer)
+    4) Parameter Sharing 
+
+(1) Convolution Layer (CONV Layer)
+ - a set of learnable filters.
+ - These filters help capture spatial features.
+ - The output is a two-dimensional activation map from each filter, which are then stacked to get the final output.
+
+(2) Pooling Layer (POOL Layer)
+ - Down-sampling layers used to reduce spatial size and number of parameters.
+ - These layers also help in controlling overfitting.
+ - Pooling layers are inserted in between conv layers.
+ - Pooling layers can perform down sampling using functions such as max, average, L2-norm, and so on
+
+(3) Fully Connected Layer (FC Layer)
+ - Similar to fully connected layers in general neural networks.
+ - These have full connections to all neurons in the previous layer.
+ - This layer helps perform the tasks of classification
+
+(4) Parameter Sharing 
+ - The unique thing about CNNs apart from the conv layer is parameter sharing.
+ - Conv layers use same set of weights across the filters thus reducing the overall number of parameters required
+
+(+) Normalizing Layer 
+
+
+
+Objective of Convolution Operation
+ - To extract the high-level features such as edges, from the input image.
+ - ConvNets need not be limited to only one Convolutional Layer.
+ - The first ConvLayer is responsible for capturing the Low-Level features such as edges, color, gradient orientation, etc.
+ - With added layers, the architecture adapts to the HighLevel feature as well, giving us a network which has the wholesome understanding of images in the dataset, similar to how we would.
+
+Results of Convolution Operation
+ - The dimensionality of the convolved feature is increased or remain the same as compared to the input layer – Same Padding
+ - The convolved feature is reduced in dimensionality as compared to the input layer – Valid Padding.
+
+
+
+Pooling Layer
+  1) Responsible for reducing the spatial size of the Convolved Feature.
+  2) To decrease the computational power required to process the data through dimensionality reduction.
+  3) Useful for extracting dominant features which are rotational and positional invariant, thus maintaining the process of effectively training of the model.
+
+
+
+Two Types of Pooling >> Max Pooling & Average Pooling
+
+1. Max Pooling
+ - Returns the maximum value from the portion of the image covered by the Kernel.
+ - Performs as a Noise Suppressant – discards the noisy activations altogether and performs de-noising along with dimensionality reduction.
+
+2. Average Pooling
+ - Returns the average of all the values from the portion of the
+image covered by the Kernel.
+ - Performs dimensionality reduction as a noise suppressing mechanism.
+
+* c.f) Max Pooling performs a lot better than Average Pooling!!
+
+
+
+Moving on... 
+ - After going through the above process, we have successfully enabled the model to understand the features.
+ - Moving on, we are going to flatten the final output and feed it to a regular Neural Network for classification purposes.
+
+------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
