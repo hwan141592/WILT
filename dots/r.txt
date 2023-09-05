@@ -28,12 +28,27 @@ R은 R 코어 팀과 통계 컴퓨팅을 위한 R 재단에 의해 지원되는 
 
 ---
 
+R 언어 이름의 유래
+ - S 언어로부터 출발해 만들어진 언어.
+ - Ross & Robert 이름의 앞글자 'R'
+
+---
+
+S (programming language) - S 언어
+ - Developer: Rick Becker, Allan Wilks, John Chambers
+ - First appeared: 1976
 
 
+* 설명 (*source: wikipedia)
+
+S is a statistical programming language developed primarily by John Chambers and (in earlier versions) Rick Becker and Allan Wilks of Bell Laboratories. The aim of the language, as expressed by John Chambers, is "to turn ideas into software, quickly and faithfully".
+
+The modern implementation of S is R, a part of the GNU free software project. S-PLUS, a commercial product, was formerly sold by TIBCO Software.[citation needed
+
+---
 
 * Reference
+ - https://en.wikipedia.org/wiki/S_(programming_language)
  - https://namu.wiki/w/R(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%96%B8%EC%96%B4)
-
-
 
 
