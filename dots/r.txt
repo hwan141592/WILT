@@ -1,0 +1,39 @@
+
+개요
+ - 1992년 뉴질랜드 '오클랜드 대학교'에서 개발된 통계 패키지 언어
+ - 인터프리터 방식의 프로그래밍 언어
+ - 계량경제학에 특화되고 상대적으로 배우기 쉬움.
+ - 창시자/개발자: Ross Ihaka & Robert Gentleman
+ - 오클랜드 대학교의 통계 수업에서 활용하기 위해 통계학자들이 개발한 언어.
+
+---
+
+설명 원문
+
+R is a programming language for statistical computing and graphics supported by the R Core Team and the R Foundation for Statistical Computing. Created by statisticians Ross Ihaka and Robert Gentleman, R is used among data miners, bioinformaticians and statisticians for data analysis and developing statistical software.[7] The core R language is augmented by a large number of extension packages containing reusable code and documentation.
+
+According to user surveys and studies of scholarly literature databases, R is one of the most commonly used programming languages in data mining.[8] As of April 2023, R ranks 16th in the TIOBE index, a measure of programming language popularity, in which the language peaked in 8th place in August 2020.[9][10]
+
+The official R software environment is an open-source free software environment released as part of the GNU Project and available under the GNU General Public License. It is written primarily in C, Fortran, and R itself (partially self-hosting). Precompiled executables are provided for various operating systems. R has a command line interface.[11] Multiple third-party graphical user interfaces are also available, such as RStudio, an integrated development environment, and Jupyter, a notebook interface.
+
+---
+
+ChatGPT 번역본
+
+R은 R 코어 팀과 통계 컴퓨팅을 위한 R 재단에 의해 지원되는 통계 계산 및 그래픽을 위한 프로그래밍 언어입니다. 통계학자 Ross Ihaka와 Robert Gentleman에 의해 만들어진 R은 데이터 마이너, 바이오인포매틱 전문가 및 통계학자들 사이에서 데이터 분석 및 통계 소프트웨어 개발을 위해 사용됩니다.[7] 핵심 R 언어는 재사용 가능한 코드와 문서를 포함하는 대량의 확장 패키지로 확장됩니다.
+
+사용자 설문 조사와 학술 문헌 데이터베이스 연구에 따르면, R은 데이터 마이닝에서 가장 자주 사용되는 프로그래밍 언어 중 하나입니다.[8] 2023년 4월 현재, R은 TIOBE 지수에서 프로그래밍 언어 인기도를 측정하는 데 있어 16위를 차지하며, 이 언어는 2020년 8월에 8위로 최고점을 찍었습니다.[9][10]
+
+공식 R 소프트웨어 환경은 GNU 프로젝트의 일부로 출시된 오픈소스 무료 소프트웨어 환경으로, GNU 일반 공중 라이선스에 따라 사용 가능합니다. 주로 C, 포트란 및 R 자체(부분적으로 자체 호스팅)로 작성되어 있습니다. 다양한 운영체제용으로 사전 컴파일된 실행 파일이 제공됩니다. R은 명령 줄 인터페이스를 갖추고 있습니다.[11] RStudio와 같은 통합 개발 환경 및 Jupyter와 같은 노트북 인터페이스를 포함하여 여러 서드파티 그래픽 사용자 인터페이스도 사용 가능합니다.
+
+---
+
+
+
+
+* Reference
+ - https://namu.wiki/w/R(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EC%96%B8%EC%96%B4)
+
+
+
+
